@@ -142,3 +142,5 @@ python manage.py runserver
 
 이 프로젝트는 단순 Todo 앱이 아닌
 "실무 확장형 Django → DRF → AI → 비동기 구조 학습 프로젝트"입니다.
+<img width="1644" height="909" alt="image" src="https://github.com/user-attachments/assets/851f8a8b-f913-49ac-9f9e-d79e553b02e4" />
+
