@@ -142,10 +142,6 @@ python manage.py runserver
 
 이 프로젝트는 단순 Todo 앱이 아닌
 "실무 확장형 Django → DRF → AI → 비동기 구조 학습 프로젝트"입니다.
-<<<<<<< Updated upstream
-<img width="1644" height="909" alt="image" src="https://github.com/user-attachments/assets/851f8a8b-f913-49ac-9f9e-d79e553b02e4" />
-<img width="1354" height="818" alt="retrieve2026-03-05 235239" src="https://github.com/user-attachments/assets/465e53a5-20e0-48b7-8933-a3ae33ed96b3" />
-=======
 
 ![architecture](imge/retrieve2026-03-06 000245.png)
 ![architecture](todo_admin 2026-03-05 200520.png)
@@ -156,4 +152,3 @@ python manage.py runserver
 ![architecture](create2026-03-05 173203.png)
 ![architecture](api_list2026-03-05 172443.png)
 ![architecture](스크린샷 2026-03-06 013249.png)
->>>>>>> Stashed changes
