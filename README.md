@@ -20,15 +20,16 @@ AI 모델 연동(Hugging Face), Redis/Celery 비동기 처리까지
 
 ---
 
-![architecture](DRFtodoList/imge/1.png)
-![architecture](DRFtodoList/imge/2.png)
-![architecture](DRFtodoList/imge/3.png)
-![architecture](DRFtodoList/imge/4.png)
-![architecture](DRFtodoList/imge/5.png)
-![architecture](DRFtodoList/imge/6.png)
-![architecture](DRFtodoList/imge/7.png)
-![architecture](DRFtodoList/imge/8.png)
-![architecture](DRFtodoList/imge/9.png)
+
+![architecture](imge/1.png)
+![architecture](imge/2.png)
+![architecture](imge/3.png)
+![architecture](imge/4.png)
+![architecture](imge/5.png)
+![architecture](imge/6.png)
+![architecture](imge/7.png)
+![architecture](imge/8.png)
+![architecture](imge/9.png)
 
 ## 🧭 전체 개발 로드맵
 
