@@ -20,6 +20,16 @@ AI 모델 연동(Hugging Face), Redis/Celery 비동기 처리까지
 
 ---
 
+![architecture](DRFtodolist/imge/1.png)
+![architecture](DRFtodolist/imge/2.png)
+![architecture](DRFtodolist/imge/3.png)
+![architecture](DRFtodolist/imge/4.png)
+![architecture](DRFtodolist/imge/5.png)
+![architecture](DRFtodolist/imge/6.png)
+![architecture](DRFtodolist/imge/7.png)
+![architecture](DRFtodolist/imge/8.png)
+![architecture](DRFtodolist/imge/9.png)
+
 ## 🧭 전체 개발 로드맵
 
 ### 1️⃣ Django 기본 세팅
@@ -142,13 +152,3 @@ python manage.py runserver
 
 이 프로젝트는 단순 Todo 앱이 아닌
 "실무 확장형 Django → DRF → AI → 비동기 구조 학습 프로젝트"입니다.
-
-![architecture](imge/1.png)
-![architecture](imge/2.png)
-![architecture](imge/3.png)
-![architecture](imge/4.png)
-![architecture](imge/5.png)
-![architecture](imge/6.png)
-![architecture](imge/7.png)
-![architecture](imge/8.png)
-![architecture](imge/9.png)
