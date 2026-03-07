@@ -33,6 +33,7 @@ AI 모델 연동(Hugging Face), Redis/Celery 비동기 처리까지
 ![architecture](imge/수정.png)
 ![architecture](imge/삭제.png)
 ![architecture](imge/삭제2.png)
+![architecture](imge/views_test.png)
 
 
 
