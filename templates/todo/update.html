@@ -10,6 +10,21 @@
     <input type="text" name="name" id="name" value="{{ todo.name }}">
   </div>
 
+   <div>
+    <label>Current Image:</label><br>
+    {% if todo.image %}
+      <img src="{{ todo.image.url }}" alt="todo image" style="max-width:250px; height:auto;">
+    {% else %}
+      <p>-</p>
+    {% endif %}
+  </div>
+
+  <div>
+    <label for="image">New Image:</label>
+    <input type="file" id="image">
+  </div>
+
+
   <div>
     <label for="description">Description:</label>
     <textarea name="description" id="description">{{ todo.description }}</textarea>
@@ -78,7 +93,15 @@ document.getElementById("todoUpdate").addEventListener("click", async () => {
     // 체크박스 상태(true / false)를 complete 값으로 추가
 
     formData.append("exp", document.getElementById("exp").value || 0);
+
     // exp 입력값 추가 (값이 없으면 0으로 설정)
+
+    const fileInput = document.getElementById("image");
+
+    // 새 이미지를 선택했을 경우에만 image 필드를 추가
+    // (이미지를 변경하지 않으면 서버로 보내지 않음)
+    if (fileInput.files.length > 0) {
+      formData.append("image", fileInput.files[0]);
 
     const res = await api.patch(`/todo/viewsets/view/${todoId}/`, formData);
     // PATCH 요청으로 Todo 데이터 수정 API 호출

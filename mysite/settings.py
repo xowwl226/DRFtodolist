@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,14 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-%6$3q=#uq2j(%cb1s7ke6180cmxt%_u8ej20+-)w4hn9#lq&ez"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+env = environ.Env(DEBUG=(bool, False))
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
+SECRET_KEY = env("SECRET_KEY")  # ✅
+DEBUG = env("DEBUG")
 ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -119,8 +122,24 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+# REST_FRAMEWORK = {
+#     "DEFAULT_RENDERER_CLASSES": [
+#         "rest_framework.renderers.JSONRenderer",
+#     ],
+# }
 REST_FRAMEWORK = {
+    # 기본권한 설정: 누구나 API에 접근 가능(개발시 사용)
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+    # 기본 페이지네이션 설정
+    "DEFAULT_PAGINATION_CLASS": "todo.pagination.CustomPageNumberPagination",
+    "PAGE_SIZE": 3,
+    # API응답형식
     "DEFAULT_RENDERER_CLASSES": [
         "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
     ],
 }
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"

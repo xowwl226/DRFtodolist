@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from ..models import Todo  # 경로변경
 from ..serializers import TodoSerializer  # 경로변경
+from rest_framework.pagination import PageNumberPagination
 
 
 # Django에서 상세 페이지를 만들 때 사용하는 제네릭 뷰
@@ -11,6 +12,18 @@ class TodoViewSet(viewsets.ModelViewSet):
     # created_at 기준으로 최신 데이터가 먼저 나오도록 정렬
 
     serializer_class = TodoSerializer
+
+
+class TodoListPagination(PageNumberPagination):
+
+    page_size = 3
+    # 한 페이지에 기본적으로 보여줄 데이터 개수
+
+    page_size_query_param = "page_size"
+    # URL 쿼리 파라미터로 페이지 크기 변경 가능
+    # 예: /todo/viewsets/view/?page_size=5
+
+    max_page_size = 50
 
 
 # 상세보기 API
