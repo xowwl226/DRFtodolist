@@ -40,6 +40,7 @@
 # # 둘중 한개를 사용합니다.
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class Todo(models.Model):
@@ -52,6 +53,7 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     # 이미지 필드 추가
     image = models.ImageField(upload_to="todo_images/", blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="todos")
 
     def __str__(self):
         return self.name

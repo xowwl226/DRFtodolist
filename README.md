@@ -19,6 +19,7 @@ AI 모델 연동(Hugging Face), Redis/Celery 비동기 처리까지
 - 실무형 프로젝트 구조 설계
 
 ---
+![architecture](imge/7회원가입.png)
 ![architecture](imge/이미지필드추가.png)
 ![architecture](imge/삭제.png)
 ![architecture](imge/삭제2.png)
